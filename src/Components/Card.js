@@ -44,6 +44,7 @@ const Cards = () => {
   useEffect(() => {
     axios.get("https://adminlm.onrender.com/api/product/")
       .then(response => {
+        console.log(response.data);
         setCardsData(response.data);
       })
       .catch(error => {
